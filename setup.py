@@ -25,5 +25,8 @@ setup(
     include_package_data=True,
     install_requires=required_packages,
     setup_requires=required_packages,
-    dependency_links=["https://github.com/Amulet-Team/Amulet-NBT"],
+    dependency_links=[
+        "git+git://github.com/Amulet-Team/Amulet-NBT.git#egg=amulet-nbt"
+        "git+git://github.com/gentlegiantJGC/PyMCTranslate.git#egg=PyMCTranslate"
+    ],
 )
