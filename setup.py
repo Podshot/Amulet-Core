@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from amulet import version
+import amulet.version
 
 
 def get_egg_name_from_git_uri(uri):
@@ -20,7 +20,7 @@ with open("./requirements.txt") as requirements_fp:
 
 setup(
     name="amulet-core",
-    version=".".join(map(str, version.VERSION_NUMBER)),
+    version=".".join(map(str, amulet.version.VERSION_NUMBER)),
     packages=packs,
     include_package_data=True,
     install_requires=required_packages,
