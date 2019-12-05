@@ -5,8 +5,8 @@ import amulet.version
 
 def get_egg_name_from_git_uri(uri):
     if uri.startswith("git+") or uri.startswith("https:"):
-        return uri[uri.index("#egg=") + len("#egg=") :]
-    return uri
+        return uri[uri.index("#egg=") + len("#egg=") :].strip()
+    return uri.strip()
 
 
 packs = find_packages(
