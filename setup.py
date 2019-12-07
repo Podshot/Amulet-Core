@@ -20,7 +20,7 @@ packs = find_packages(
     include=["amulet*"], exclude=["*.command_line", "*.command_line.*"]
 )
 
-with open(op.join('.', 'requirements.txt') as requirements_fp:
+with open(op.join('.', 'requirements.txt')) as requirements_fp:
     required_packages = [
         get_egg_name_from_git_uri(line) for line in requirements_fp.readlines()
     ]
