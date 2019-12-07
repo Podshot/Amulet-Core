@@ -13,6 +13,8 @@ if op.exists(op.join('.', 'version.json')):
 def get_egg_name_from_git_uri(uri):
     if (uri.startswith("git+") or uri.startswith("https:")) and '#egg=' in uri:
         return uri[uri.index("#egg=") + len("#egg=") :].strip()
+    elif uri.startswith("git+") or uri.startswith("https:"):
+        return ""
     return uri.strip()
 
 
