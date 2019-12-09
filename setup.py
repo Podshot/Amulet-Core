@@ -36,7 +36,7 @@ setup(
     include_package_data=True,
     install_requires=required_packages,
     setup_requires=required_packages,
-    package_data: {
+    package_data={
         "amulet": [os.path.join(root, filename) for root, _, filenames in os.walk(world_interface_path) for filename in filenames if '__pycache__' not in root]
     }
 #    dependency_links=[
